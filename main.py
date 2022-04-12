@@ -73,8 +73,9 @@ def decreasingOrderUsingStringMultiplication(n):
 
 def levelsCalculatorHelper(n):
     """
-    Calculates the number of levels for the triangle problems.
-    Levels would be the number of rows required in the triangle given the user input.
+    Calculates the maximum number of asterisks required for the triangle problems given the user input.
+    This will always be an odd number.
+    Since we need to make triangles of particular sizes thats the reason we calculate this.
 
     Basically if user input is 1 then the levels would be 1.
     If 2 then 3
@@ -190,10 +191,32 @@ def reverseTriangle(n):
 def diamond(n):
     """
        Prints a diamond shape depending on the size of n
-
+       This will be based on the logic and code of the triangle and the reverse triangle
+       Its just that we reduce the size of levels by 1 in the reverse triangle
        :param n: pattern size
     """
-    pass
+    print("diamond shape-")
+
+    levels = levelsCalculatorHelper(n)
+
+    firstHalfSpaces = int(levels / 2)
+    secondHalfSpaces = 1
+
+    # normal triangle
+    for i in range(1, levels + 1):
+        if i % 2 == 1:
+            print("   " * firstHalfSpaces, end="")
+            print(" * " * i, end="")
+            print("   " * firstHalfSpaces)
+            firstHalfSpaces -= 1
+
+    # reverse triangle
+    for i in range(levels-1, 0, -1):
+        if i % 2 == 1:
+            print("   " * secondHalfSpaces, end="")
+            print(" * " * i, end="")
+            print("   " * secondHalfSpaces)
+            secondHalfSpaces += 1
 
 
 def cross(n):
