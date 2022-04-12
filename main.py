@@ -16,6 +16,7 @@ def increasingOrderUsingForLoops(n):
         print("")
     print("")
 
+
 def decreasingOrderUsingForLoops(n):
     """
     Prints in decreasing order of asterisks
@@ -33,6 +34,7 @@ def decreasingOrderUsingForLoops(n):
             print("*", end="")
         print("")
     print("")
+
 
 def increasingOrderUsingStringMultiplication(n):
     """
@@ -69,6 +71,27 @@ def decreasingOrderUsingStringMultiplication(n):
     print("")
 
 
+def levelsCalculatorHelper(n):
+    """
+    Calculates the number of levels for the triangle problems.
+    Levels would be the number of rows required in the triangle given the user input.
+
+    Basically if user input is 1 then the levels would be 1.
+    If 2 then 3
+    If 3 then 5
+    If 4 then 7
+    If 5 then 9
+
+    :param n: user input
+    :return: number of levels
+    """
+    if n == 1:
+        levels = 1
+    else:
+        levels = (n - 1) + n
+    return levels
+
+
 def triangleUsingForLoops(n):
     """
     Prints a triangle depending on n
@@ -84,10 +107,8 @@ def triangleUsingForLoops(n):
     :param n: pattern size
     """
     print("triangle using for loops- ")
-    if n == 1:
-        levels = 1
-    else:
-        levels = (n - 1) + n
+
+    levels = levelsCalculatorHelper(n)
 
     spaces = int(levels/2)
 
@@ -121,10 +142,8 @@ def triangleUsingStringMultiplication(n):
     :param n: pattern size
     """
     print("triangle using string multiplication- ")
-    if n == 1:
-        levels = 1
-    else:
-        levels = (n - 1) + n
+
+    levels = levelsCalculatorHelper(n)
 
     spaces = int(levels/2)
 
@@ -151,10 +170,8 @@ def reverseTriangle(n):
     :param n: pattern size
     """
     print("reverse triangle- ")
-    if n == 1:
-        levels = 1
-    else:
-        levels = (n - 1) + n
+
+    levels = levelsCalculatorHelper(n)
 
     spaces = 1
 
