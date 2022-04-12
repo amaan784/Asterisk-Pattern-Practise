@@ -193,6 +193,14 @@ def diamond(n):
        Prints a diamond shape depending on the size of n
        This will be based on the logic and code of the triangle and the reverse triangle
        Its just that we reduce the size of levels by 1 in the reverse triangle
+
+       eg - if n is 3 then
+               *
+            *  *  *
+         *  *  *  *  *
+            *  *  *
+               *
+
        :param n: pattern size
     """
     print("diamond shape-")
@@ -217,6 +225,7 @@ def diamond(n):
             print(" * " * i, end="")
             print("   " * secondHalfSpaces)
             secondHalfSpaces += 1
+    print("")
 
 
 def cross(n):
@@ -225,10 +234,30 @@ def cross(n):
 
        :param n: pattern size
     """
+
+    print("TBD cross shape")
     pass
 
 
 def eight(n):
+    """
+       Prints an eight shape depending on the size of n
+
+       :param n: pattern size
+    """
+
+    print("TBD eight shape")
+    pass
+
+
+def box(n):
+    """
+       Prints a box shape depending on the size of n
+
+       :param n: pattern size
+    """
+
+    print("TBD box shape")
     pass
 
 
@@ -245,8 +274,9 @@ if __name__ == '__main__':
     # triangleUsingForLoops(userInput)
     # triangleUsingStringMultiplication(userInput)
     # reverseTriangle(userInput)
+    # diamond(userInput)
 
-    diamond(userInput)
     cross(userInput)
     eight(userInput)
+    box(userInput)
 
