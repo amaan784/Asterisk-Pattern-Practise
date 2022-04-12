@@ -180,6 +180,11 @@ def diamond(n):
 
 
 def cross(n):
+    """
+       Prints a cross shape depending on the size of n
+
+       :param n: pattern size
+    """
     pass
 
 
