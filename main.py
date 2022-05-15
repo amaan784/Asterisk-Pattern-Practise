@@ -228,6 +228,48 @@ def diamond(n):
     print("")
 
 
+def ModifiedFloydsTriangle(n):
+    """
+    Prints a modified version of Floyds triangle
+
+    TBD: change user input format
+    
+    Eg -
+    If user input is 5 then
+
+    1	*	*	*	*	*	*	*	*	1
+    2	3	*	*	*	*	*	*	3	2
+    4	5	6	*	*	*	*	6	5	4
+    7	8	9	10	*	*	10	9	8	7
+    11	12	13	14	15	15	14	13	12	11
+
+    :param n: pattern size
+    """
+
+    h = int(input("Enter the height (>0): "))
+
+    while h <= 0:
+        print("Invalid Entry")
+        h = int(input("Enter the height (>0): "))
+
+    x = 1
+
+    for i in range(1,h+1):
+        stars = 0
+        for j in range(1,i+1):
+            print(x, end = "   ")
+            x = x + 1
+        stars = h - i
+        for k in range(stars):
+            print("*", end = "   ")
+            print("*", end = "   ")
+        z = int(x)
+        for a in range(i+1,1,-1):
+            z = z - 1
+            print(z, end = "   ")
+        print()
+
+
 def cross(n):
     """
        Prints a cross shape depending on the size of n
@@ -275,8 +317,8 @@ if __name__ == '__main__':
     # triangleUsingStringMultiplication(userInput)
     # reverseTriangle(userInput)
     # diamond(userInput)
+    # ModifiedFloydsTriangle(userInput)
 
     cross(userInput)
     eight(userInput)
     box(userInput)
-
